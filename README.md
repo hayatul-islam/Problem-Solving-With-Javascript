@@ -27,9 +27,8 @@ console.log(chunkFunc(["a", "b", "c", "d", "e", "f"], 2));
 
 Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
 
-### compact([0, 1, false, 2, '', 3])
-
-### Output: [1, 2, 3]
+compact([0, 1, false, 2, '', 3])
+Output: [1, 2, 3]
 
 ```javascript
 //  Example: 1
