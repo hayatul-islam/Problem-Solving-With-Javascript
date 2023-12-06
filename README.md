@@ -1,16 +1,13 @@
-## Chunk Array Function
+### Chunk Array Function
 
 Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
 
 ```javascript
-chunkFunc(["a", "b", "c", "d"], 2);
-Output: [
-  ["a", "b"],
-  ["c", "d"],
-];
+// chunkFunc(["a", "b", "c", "d"], 2);
+// Output: [["a", "b"],["c", "d"],];
 
-chunkFunc(["a", "b", "c", "d"], 3);
-Output: [["a", "b", "c"], ["d"]];
+// chunkFunc(["a", "b", "c", "d"], 3);
+// Output: [["a", "b", "c"], ["d"]];
 
 const chunkFunc = (arr, size) => {
   const result = [];
@@ -20,11 +17,11 @@ const chunkFunc = (arr, size) => {
   return result;
 };
 
-console.log(chunkFunc(["a", "b", "c", "d", "e", "f"], 2));
+console.log(chunkFunc(["a", "b", "c", "d"], 2));
 // Output: [['a', 'b'], ['c', 'd']]
 ```
 
-## Compact Array Function
+### Compact Array Function
 
 Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
 
