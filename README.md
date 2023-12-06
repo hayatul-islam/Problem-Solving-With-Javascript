@@ -2,14 +2,15 @@
 
 Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
 
-### Example:
-
 ```javascript
-// chunkFunc(["a", "b", "c", "d"], 2);
-// Output: [['a', 'b'], ['c', 'd']]
+chunkFunc(["a", "b", "c", "d"], 2);
+Output: [
+  ["a", "b"],
+  ["c", "d"],
+];
 
-// chunkFunc(["a", "b", "c", "d"], 3);
-// Output: [['a', 'b', 'c'], ['d']]
+chunkFunc(["a", "b", "c", "d"], 3);
+Output: [["a", "b", "c"], ["d"]];
 
 const chunkFunc = (arr, size) => {
   const result = [];
@@ -27,10 +28,10 @@ console.log(chunkFunc(["a", "b", "c", "d", "e", "f"], 2));
 
 Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
 
-compact([0, 1, false, 2, '', 3])
-Output: [1, 2, 3]
-
 ```javascript
+compact([0, 1, false, 2, "", 3]);
+Output: [1, 2, 3];
+
 //  Example: 1
 const compact = (arr) => {
   const result = [];
