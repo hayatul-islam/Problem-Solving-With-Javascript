@@ -1,3 +1,5 @@
+// Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
+
 // chunk(["a", "b", "c", "d"], 2)
 // Output: [['a', 'b'], ['c', 'd']]
 
