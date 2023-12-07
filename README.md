@@ -183,3 +183,33 @@ const fill2 = (arr, value, start = 0, end = arr.length) => {
 
 console.log(fill2([1, 2, 3, 4, 5, 6], "*", 1, 4));
 ```
+
+### Array Find Index
+
+This method is like find except that it returns the index of the first element predicate returns truthy for instead of the element itself.
+
+```javascript
+var users = [
+  { user: "barney", active: false },
+  { user: "fred", active: false },
+  { user: "pebbles", active: true },
+];
+
+// findIndex(users, function(o) { return o.user == 'barney'; });
+// Output: 0
+
+// findIndex(users, { 'user': 'fred', 'active': false });
+// Output: 1
+
+const findIndex = (arr, cb) => {
+  for (let i = 0; i < arr.length; i++) {
+    if (cb(arr[i])) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+const index = findIndex(users, (item) => item.active === true);
+console.log(index);
+```
