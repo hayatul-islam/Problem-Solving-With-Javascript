@@ -1,4 +1,4 @@
-### Chunk Array Function
+### Array Chunk
 
 Creates an array of elements split into groups the length of size. If array can't be split evenly, the final chunk will be the remaining elements.
 
@@ -21,13 +21,13 @@ console.log(chunkFunc(["a", "b", "c", "d"], 2));
 // Output: [['a', 'b'], ['c', 'd']]
 ```
 
-### Compact Array Function
+### Array Compact
 
 Creates an array with all falsey values removed. The values false, null, 0, "", undefined, and NaN are falsey.
 
 ```javascript
-compact([0, 1, false, 2, "", 3]);
-Output: [1, 2, 3];
+// compact([0, 1, false, 2, "", 3]);
+// Output: [1, 2, 3];
 
 //  Example: 1
 const compact = (arr) => {
@@ -48,4 +48,19 @@ const compact2 = (arr) => {
 };
 
 console.log(compact2([0, 1, false, 2, "", 3]));
+```
+
+### Array Concat
+
+Creates a new array concatenating array with any additional arrays and/or values.
+
+```javascript
+// concat(array, 2, [3], [[4]]);
+// Output: [1, 2, 3, [4]]
+
+const concat = (...args) => {
+  return [].concat(...args);
+};
+
+console.log(concat([1], 2, [3], [[4]]));
 ```
