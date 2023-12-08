@@ -189,7 +189,7 @@ console.log(fill2([1, 2, 3, 4, 5, 6], "*", 1, 4));
 This method is like find except that it returns the index of the first element predicate returns truthy for instead of the element itself.
 
 ```javascript
-var users = [
+const users = [
   { user: "barney", active: false },
   { user: "fred", active: false },
   { user: "pebbles", active: true },
@@ -212,4 +212,29 @@ const findIndex = (arr, cb) => {
 
 const index = findIndex(users, (item) => item.active === true);
 console.log(index);
+```
+
+### Array Index Of
+
+Gets the index at which the first occurrence of value is found in array using SameValueZero for equality comparisons. If fromIndex is negative, it's used as the offset from the end of array.
+
+```javascript
+// indexOf([1, 2, 1, 2], 2);
+// Output:  1
+
+// indexOf([1, 2, 1, 2], 2, 2);
+// Output: 3
+
+const arr = [1, 2, 3, 4, 5, 3, 6];
+
+const findIndex = (arr, value, from = 0) => {
+  for (let i = from; i < arr.length; i++) {
+    if (arr[i] === value) {
+      return i;
+    }
+  }
+  return -1;
+};
+
+console.log(findIndex(arr, 3, 3));
 ```
